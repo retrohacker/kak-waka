@@ -26,6 +26,7 @@ def -hidden	wakatime-heartbeat -params 0..1 %{
 
 		# Every command will look like that.
 		command="$kak_opt_wakatime_command $kak_opt_wakatime_options --entity \"$kak_buffile\" --time $this"
+		command="$command --plugin \"kakoune/$kak_version retrohacker/kak-waka\""
 
 		# If we have the cursor position, then let's hand it off to WakaTime.
 		if [ -n "$kak_cursor_byte_offset" ]; then
